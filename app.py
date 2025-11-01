@@ -1,7 +1,7 @@
 import streamlit as st
 from ai import get_response  # ai.pyから関数をインポート
 
-st.title("Streamlit LLM App")
+st.title("きのこたけのこ討論")
 
 # radio button
 selected_expert = st.radio(
@@ -10,9 +10,9 @@ selected_expert = st.radio(
 )
 
 # form
-input_message = st.text_input(label="プロンプトを入力してください。")
+input_message = st.text_input(label="質問を入力してください。")
 
 # button
-if st.button("実行"):
+if st.button("ご意見を伺う"):
   response = get_response(selected_expert, input_message)
   st.write(response)
